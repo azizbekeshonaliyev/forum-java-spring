@@ -20,6 +20,8 @@ public class QuestionItem {
 
     private Set<AnswerItem> answers;
 
+    private Set<TagItem> tags;
+
     public static QuestionItem fromQuestion(Question question) {
         QuestionItem questionItem = new QuestionItem();
         questionItem.setId(question.getId());
@@ -29,6 +31,12 @@ public class QuestionItem {
                 question.getAnswers()
                 .stream()
                 .map(AnswerItem::fromAnswer)
+                .collect(Collectors.toSet())
+        );
+        questionItem.setTags(
+                question.getTags()
+                .stream()
+                .map(TagItem::fromTag)
                 .collect(Collectors.toSet())
         );
         return questionItem;

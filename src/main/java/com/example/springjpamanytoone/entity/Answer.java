@@ -8,10 +8,7 @@ import javax.persistence.*;
 @Entity
 @Setter
 @Getter
-public class Answer {
-
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Answer extends BaseEntity{
 
     private String content;
 

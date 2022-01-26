@@ -16,6 +16,8 @@ public class QuestionForm {
 
     private Set<AnswerForm> answers = new HashSet<>();
 
+    private Set<TagItem> tags = new HashSet<>();
+
     @Setter
     @Getter
     public static class AnswerForm {
