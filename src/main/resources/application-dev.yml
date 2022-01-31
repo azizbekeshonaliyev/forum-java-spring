@@ -11,6 +11,8 @@ spring:
       ddl-auto: update
   security:
     oauth2:
+      client:
+        sign-in-key: bek96azizbek
       resourceserver:
         opaquetoken:
           client-id: bek96

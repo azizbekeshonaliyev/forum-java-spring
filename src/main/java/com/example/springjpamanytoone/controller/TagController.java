@@ -3,6 +3,7 @@ package com.example.springjpamanytoone.controller;
 import com.example.springjpamanytoone.model.TagItem;
 import com.example.springjpamanytoone.model.TagListItem;
 import com.example.springjpamanytoone.service.TagService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class TagController
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
     public List<TagListItem> list(@RequestParam(required = false) String keyword){
         return tagService.list(keyword);
     }
