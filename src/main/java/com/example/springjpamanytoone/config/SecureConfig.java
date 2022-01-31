@@ -1,6 +1,7 @@
 package com.example.springjpamanytoone.config;
 
 import com.example.springjpamanytoone.service.impl.CustomUserDetailsService;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -39,6 +40,7 @@ public class SecureConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable();
     }
 
+    @Bean
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
     }
