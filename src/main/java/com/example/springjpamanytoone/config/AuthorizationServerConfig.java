@@ -32,7 +32,6 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(
             ClientDetailsServiceConfigurer clients
     ) throws Exception {
-        System.out.println("ssss");
         clients.inMemory()
                 .withClient(clientId)
                 .authorizedGrantTypes("password")

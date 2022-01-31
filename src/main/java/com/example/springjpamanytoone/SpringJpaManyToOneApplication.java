@@ -27,7 +27,6 @@ public class SpringJpaManyToOneApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
         System.out.println(passwordEncoder.encode("bek96"));
     }
 }
